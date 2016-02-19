@@ -1,0 +1,30 @@
+//
+//  Head.pch
+//  EaseTalk
+//
+//  Created by einsphy on 16/2/19.
+//  Copyright © 2016年 einsphy. All rights reserved.
+//
+
+#ifndef Head_pch
+#define Head_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//调试阶段会打印，发布阶段不会
+#ifdef DEBUG
+
+#define HXLog(...) NSL(__VA_ARGS__)
+
+#else
+
+#define HXLog(...)
+
+#endif
+
+
+#define HXColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0] 
+
+
+#endif /* Head_pch */

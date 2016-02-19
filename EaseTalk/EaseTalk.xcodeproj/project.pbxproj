@@ -15,6 +15,12 @@
 		C0F1C6E21C7715240002163D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F1C6E01C7715240002163D /* LaunchScreen.storyboard */; };
 		C0F1C6ED1C7715240002163D /* EaseTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C6EC1C7715240002163D /* EaseTalkTests.m */; };
 		C0F1C6F81C7715240002163D /* EaseTalkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C6F71C7715240002163D /* EaseTalkUITests.m */; };
+		C0F1C7121C7716300002163D /* EaseTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C7081C7716300002163D /* EaseTalkViewController.m */; };
+		C0F1C7131C7716300002163D /* ETMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C70B1C7716300002163D /* ETMapViewController.m */; };
+		C0F1C7141C7716300002163D /* ETPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C70E1C7716300002163D /* ETPayViewController.m */; };
+		C0F1C7151C7716300002163D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C7111C7716300002163D /* ProfileViewController.m */; };
+		C0F1C71B1C77165A0002163D /* ETNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C7171C77165A0002163D /* ETNavigationController.m */; };
+		C0F1C71C1C77165A0002163D /* ETTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C7191C77165A0002163D /* ETTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,19 @@
 		C0F1C6F31C7715240002163D /* EaseTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaseTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F1C6F71C7715240002163D /* EaseTalkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EaseTalkUITests.m; sourceTree = "<group>"; };
 		C0F1C6F91C7715240002163D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F1C7071C7716300002163D /* EaseTalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseTalkViewController.h; sourceTree = "<group>"; };
+		C0F1C7081C7716300002163D /* EaseTalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseTalkViewController.m; sourceTree = "<group>"; };
+		C0F1C70A1C7716300002163D /* ETMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMapViewController.h; sourceTree = "<group>"; };
+		C0F1C70B1C7716300002163D /* ETMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETMapViewController.m; sourceTree = "<group>"; };
+		C0F1C70D1C7716300002163D /* ETPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPayViewController.h; sourceTree = "<group>"; };
+		C0F1C70E1C7716300002163D /* ETPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPayViewController.m; sourceTree = "<group>"; };
+		C0F1C7101C7716300002163D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		C0F1C7111C7716300002163D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		C0F1C7161C77165A0002163D /* ETNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETNavigationController.h; sourceTree = "<group>"; };
+		C0F1C7171C77165A0002163D /* ETNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETNavigationController.m; sourceTree = "<group>"; };
+		C0F1C7181C77165A0002163D /* ETTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTabBarController.h; sourceTree = "<group>"; };
+		C0F1C7191C77165A0002163D /* ETTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTabBarController.m; sourceTree = "<group>"; };
+		C0F1C71A1C77165A0002163D /* Head.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Head.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +124,12 @@
 				C0F1C6D61C7715240002163D /* AppDelegate.m */,
 				C0F1C6D81C7715240002163D /* ViewController.h */,
 				C0F1C6D91C7715240002163D /* ViewController.m */,
+				C0F1C7161C77165A0002163D /* ETNavigationController.h */,
+				C0F1C7171C77165A0002163D /* ETNavigationController.m */,
+				C0F1C7181C77165A0002163D /* ETTabBarController.h */,
+				C0F1C7191C77165A0002163D /* ETTabBarController.m */,
+				C0F1C71A1C77165A0002163D /* Head.pch */,
+				C0F1C7051C7716300002163D /* Classes */,
 				C0F1C6DB1C7715240002163D /* Main.storyboard */,
 				C0F1C6DE1C7715240002163D /* Assets.xcassets */,
 				C0F1C6E01C7715240002163D /* LaunchScreen.storyboard */,
@@ -138,6 +163,53 @@
 				C0F1C6F91C7715240002163D /* Info.plist */,
 			);
 			path = EaseTalkUITests;
+			sourceTree = "<group>";
+		};
+		C0F1C7051C7716300002163D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C0F1C7061C7716300002163D /* EaseTalk */,
+				C0F1C7091C7716300002163D /* Map */,
+				C0F1C70C1C7716300002163D /* Pay */,
+				C0F1C70F1C7716300002163D /* Profile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C0F1C7061C7716300002163D /* EaseTalk */ = {
+			isa = PBXGroup;
+			children = (
+				C0F1C7071C7716300002163D /* EaseTalkViewController.h */,
+				C0F1C7081C7716300002163D /* EaseTalkViewController.m */,
+			);
+			path = EaseTalk;
+			sourceTree = "<group>";
+		};
+		C0F1C7091C7716300002163D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C0F1C70A1C7716300002163D /* ETMapViewController.h */,
+				C0F1C70B1C7716300002163D /* ETMapViewController.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C0F1C70C1C7716300002163D /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				C0F1C70D1C7716300002163D /* ETPayViewController.h */,
+				C0F1C70E1C7716300002163D /* ETPayViewController.m */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		C0F1C70F1C7716300002163D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C0F1C7101C7716300002163D /* ProfileViewController.h */,
+				C0F1C7111C7716300002163D /* ProfileViewController.m */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F1C71B1C77165A0002163D /* ETNavigationController.m in Sources */,
+				C0F1C7121C7716300002163D /* EaseTalkViewController.m in Sources */,
 				C0F1C6DA1C7715240002163D /* ViewController.m in Sources */,
 				C0F1C6D71C7715240002163D /* AppDelegate.m in Sources */,
+				C0F1C7131C7716300002163D /* ETMapViewController.m in Sources */,
+				C0F1C7151C7716300002163D /* ProfileViewController.m in Sources */,
+				C0F1C7141C7716300002163D /* ETPayViewController.m in Sources */,
+				C0F1C71C1C77165A0002163D /* ETTabBarController.m in Sources */,
 				C0F1C6D41C7715240002163D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
