@@ -279,6 +279,7 @@
 				TargetAttributes = {
 					C0F1C6CE1C7715240002163D = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = E8M4JHTQ5D;
 					};
 					C0F1C6E71C7715240002163D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -489,6 +490,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = EaseTalk/Head.pch;
 				INFOPLIST_FILE = EaseTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WB.EaseTalk;
@@ -500,6 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = EaseTalk/Head.pch;
 				INFOPLIST_FILE = EaseTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WB.EaseTalk;
@@ -574,6 +579,7 @@
 				C0F1C6FE1C7715240002163D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0F1C6FF1C7715240002163D /* Build configuration list for PBXNativeTarget "EaseTalkTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +588,7 @@
 				C0F1C7011C7715240002163D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0F1C7021C7715240002163D /* Build configuration list for PBXNativeTarget "EaseTalkUITests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +597,7 @@
 				C0F1C7041C7715240002163D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
