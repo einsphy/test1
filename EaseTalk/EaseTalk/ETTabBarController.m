@@ -24,18 +24,22 @@
     //环信
     EaseTalkViewController *easeVC = [[EaseTalkViewController alloc]init];
     [self addChildViewController:easeVC withTitle:@"环信" image:@"familybook@2x" selectedImage:@"familybook_highlight@2x"];
+    easeVC.view.backgroundColor = [UIColor redColor];
     
     //支付
     ETPayViewController *pay = [[ETPayViewController alloc]init];
     [self addChildViewController:pay withTitle:@"支付" image:@"myfamily@2x" selectedImage:@"myfamily_highlight@2x"];
+    pay.view.backgroundColor = [UIColor greenColor];
     
     //地图
     ETMapViewController *map = [[ETMapViewController alloc]init];
     [self addChildViewController:map withTitle:@"地图" image:@"neighbour@2x" selectedImage:@"neighbour_highlight@2x"];
+    map.view.backgroundColor = [UIColor blueColor];
     
     //我
     ProfileViewController *profile = [[ProfileViewController alloc]init];
     [self addChildViewController:profile withTitle:@"我" image:@"setting@2x" selectedImage:@"setting_highlight@2x"];
+    profile.view.backgroundColor = [UIColor brownColor];
     
 
 }
