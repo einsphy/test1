@@ -8,7 +8,11 @@
 
 #import "EaseTalkViewController.h"
 
-@interface EaseTalkViewController ()
+@interface EaseTalkViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong)UITableView *settingTableView;
+
+@property (nonatomic,strong)UIButton *btn;
 
 @end
 
@@ -16,22 +20,77 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+    self.btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.btn.width = 40;
+    self.btn.height = 40;
+    [self.btn setTitle:@"设置" forState:(UIControlStateNormal)];
+    [self.btn addTarget:self action:@selector(btnClick) forControlEvents:(UIControlEventTouchUpInside)];
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.btn];
+    self.navigationItem.leftBarButtonItem = leftItem;
+
+    self.settingTableView = [[UITableView alloc]initWithFrame:CGRectMake(- self.view.width / 2, 0, self.view.width / 2, self.view.height) style:(UITableViewStylePlain)];
+    self.settingTableView.dataSource = self;
+    self.settingTableView.delegate = self;
+    
+    [[UIApplication sharedApplication].windows.lastObject addSubview:self.settingTableView];
+    
+   // [self.view addSubview:self.settingTableView];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    static NSString *ID = @"cell";
+
+    UITableViewCell *cell = [self.settingTableView dequeueReusableCellWithIdentifier:ID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:ID];
+    }
+    
+    return cell;
+    
 }
 
-/*
-#pragma mark - Navigation
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
 }
-*/
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+    return 5;
+
+}
+- (void)btnClick
+{
+    self.btn.enabled = NO;
+    
+    [UIView animateWithDuration:2.0 animations:^{
+        self.settingTableView.x += self.view.width / 2;
+        HXLog(@"-------");
+    }];
+
+    
+
+
+}
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+
+    self.btn.enabled = YES;
+    [UIView animateWithDuration:2.0 animations:^{
+        self.settingTableView.x -= self.view.width / 2;
+    }];
+
+}
 
 @end

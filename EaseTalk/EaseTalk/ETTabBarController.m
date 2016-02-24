@@ -26,6 +26,20 @@
     [self addChildViewController:easeVC withTitle:@"环信" image:@"familybook@2x" selectedImage:@"familybook_highlight@2x"];
     easeVC.view.backgroundColor = [UIColor redColor];
     
+    
+    //未被点击navigationItem
+    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
+    attr[NSForegroundColorAttributeName] = HXColor(110, 110, 110);
+    HXLog(@"%@",easeVC.navigationItem.title);
+    [easeVC.navigationItem.leftBarButtonItem setTitleTextAttributes:attr forState:(UIControlStateNormal)];
+    
+    //点击后的navigationItem
+    
+    NSMutableDictionary *selectedAttr = [NSMutableDictionary dictionary];
+    selectedAttr[NSForegroundColorAttributeName] = HXColor(198, 0, 25);
+    [easeVC.navigationItem.leftBarButtonItem setTitleTextAttributes:selectedAttr forState:(UIControlStateSelected)];
+    //[MBProgressHUD showHUDAddedTo:easeVC.view animated:YES];
+    
     //支付
     ETPayViewController *pay = [[ETPayViewController alloc]init];
     [self addChildViewController:pay withTitle:@"支付" image:@"myfamily@2x" selectedImage:@"myfamily_highlight@2x"];

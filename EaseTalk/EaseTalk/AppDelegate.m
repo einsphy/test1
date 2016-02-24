@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ETTabBarController.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +23,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[ETTabBarController alloc]init];
     [self.window makeKeyAndVisible];
+    //[MBProgressHUD showHUDAddedTo:self.window animated:YES];
+    
+    
     
     
     return YES;
