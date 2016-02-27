@@ -11,7 +11,7 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
 #import "UIView+Extension.h"
 //调试阶段会打印，发布阶段不会
 #ifdef DEBUG

@@ -7,8 +7,15 @@
 //
 
 #import "ETMapViewController.h"
+#import "BMKMapManager.h"
+#import "BMKMapView.h"
+@interface ETMapViewController ()<BMKGeneralDelegate,BMKMapViewDelegate>
+{
 
-@interface ETMapViewController ()
+    BMKMapManager *_manager;
+    BMKMapView *_mapView;
+    
+}
 
 @end
 
@@ -17,22 +24,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 /**增加地图*/
+    
+    _manager = [[BMKMapManager alloc]init];
+    [_manager start:@"sz2zQujVUlpGiEhavzmeG1up" generalDelegate:self];
+    _mapView = [[BMKMapView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.view = _mapView ;
+    
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated
+{
+
+    [_mapView viewWillAppear];
+    _mapView.delegate = self;
+
 }
 
-/*
-#pragma mark - Navigation
+-(void)viewWillDisappear:(BOOL)animated
+{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [_mapView viewWillDisappear];
+    _mapView.delegate = nil;
+
 }
-*/
 
 @end
