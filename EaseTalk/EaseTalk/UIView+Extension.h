@@ -17,4 +17,5 @@
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
+- (void)rectMakeX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
 @end

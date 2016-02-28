@@ -105,4 +105,18 @@
 {
     return self.frame.origin;
 }
+
+- (void)rectMakeX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
+{
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.left.mas_equalTo(x);
+        make.top.mas_equalTo(y);
+        make.size.mas_equalTo(CGSizeMake(width, height));
+        
+    }];
+    
+    
+}
+
 @end
