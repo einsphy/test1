@@ -111,6 +111,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 /**增加地图*/
     
     _manager = [[BMKMapManager alloc]init];
@@ -184,7 +189,8 @@
     [self.view addSubview:_endCity];
     
     [_endCity mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.and.top.mas_equalTo(_startCity);
+        make.size.mas_equalTo(_startCity);
+        make.top.mas_equalTo(_startCity);
         make.left.mas_equalTo(_startCity.mas_right).offset(20);
     }];
     
@@ -204,7 +210,8 @@
     
     [_startAdress mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.size.and.left.mas_equalTo(_startCity);
+        make.size.mas_equalTo(_startCity);
+        make.left.mas_equalTo(_startCity);
         
         make.top.mas_equalTo(_startCity.mas_bottom).offset(30);
     
@@ -226,7 +233,8 @@
     
     [_endAddress mas_makeConstraints:^(MASConstraintMaker *make) {
     
-        make.size.and.top.mas_equalTo(_startAdress);
+        make.top.mas_equalTo(_startAdress);
+        make.size.mas_equalTo(_startAdress);
         
         make.left.mas_equalTo(_startAdress.mas_right).offset(20);
         
@@ -442,7 +450,8 @@
 
 -(void)onGetDrivingRouteResult:(BMKRouteSearch *)searcher result:(BMKDrivingRouteResult *)result errorCode:(BMKSearchErrorCode)error
 {
-
+    
+    
     //删除掉原来的覆盖物
     NSArray *array = [NSArray arrayWithArray:_mapView.annotations];
     [_mapView removeAnnotations:array];
