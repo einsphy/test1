@@ -28,7 +28,7 @@
 //#import "BMKGeocodeSearch.h"
 
 #import "Masonry.h"
-@interface ETMapViewController ()<BMKGeneralDelegate,BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,BMKRouteSearchDelegate>
+@interface ETMapViewController ()<BMKGeneralDelegate,BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,BMKRouteSearchDelegate,UITextFieldDelegate>
 {
 
     //管理者
@@ -166,6 +166,7 @@
     
     _startCity.backgroundColor = HXColor(255, 255, 255);
     
+    _startCity.delegate = self;
     _startCity.placeholder = @"开始城市";
     
     [self.view addSubview:_startCity];
@@ -546,6 +547,24 @@
     
     return nil;
 
+
+}
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+
+    [self.view endEditing:YES];
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+
+    [self.view resignFirstResponder];
+    
+    
+    return YES;
 
 }
 
