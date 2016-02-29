@@ -119,7 +119,7 @@
 /**增加地图*/
     
     _manager = [[BMKMapManager alloc]init];
-    [_manager start:@"sz2zQujVUlpGiEhavzmeG1up" generalDelegate:self];
+    [_manager start:baiduMapKey generalDelegate:self];
 
     
     
