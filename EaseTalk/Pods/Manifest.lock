@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - BaiduMapKit (2.10.0)
+  - EaseMobSDKFull (2.1.7)
   - FMDB (2.6):
     - FMDB/standard (= 2.6)
   - FMDB/standard (2.6)
@@ -30,6 +31,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - BaiduMapKit
+  - EaseMobSDKFull
   - FMDB (~> 2.6)
   - JPush (~> 2.1.0)
   - Masonry (~> 0.6.4)
@@ -41,6 +43,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   BaiduMapKit: 5df028c6b455d29e68e89694adbcf9d37a4bcc99
+  EaseMobSDKFull: 43858ca9a62bbe1fa4c7c006f944a3e52a4bff48
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   JPush: 92cb879829f0d81ab17b2c9ad009fdb88c6cf6e5
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
