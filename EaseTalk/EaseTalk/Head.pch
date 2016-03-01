@@ -15,6 +15,11 @@
 #import "UIView+Extension.h"
 #import "Masonry.h"
 #import "CommonKeyAndAccount.h"
+#import "EMSDKFull.h"
+#import "EMSDKFullHeaders.h"
+#import "EMMessage.h"
+#import "EaseMob.h"
+#import "HXAlert.h"
 //调试阶段会打印，发布阶段不会
 #ifdef DEBUG
 

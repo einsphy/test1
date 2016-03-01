@@ -7,7 +7,7 @@
 //
 
 #import "EaseTalkViewController.h"
-
+#import "RegistViewController.h"
 @interface EaseTalkViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)UITableView *settingTableView;
@@ -70,12 +70,18 @@
 }
 - (void)btnClick
 {
-    self.btn.enabled = NO;
     
-    [UIView animateWithDuration:2.0 animations:^{
-        self.settingTableView.x += self.view.width / 2;
-        HXLog(@"-------");
-    }];
+    
+    RegistViewController *registVC = [[RegistViewController alloc]init];
+    
+    [self.navigationController pushViewController:registVC animated:YES];
+    
+//    self.btn.enabled = NO;
+//    
+//    [UIView animateWithDuration:2.0 animations:^{
+//        self.settingTableView.x += self.view.width / 2;
+//        HXLog(@"-------");
+//    }];
 
     
 

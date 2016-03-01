@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		929C7D6D707CD2D882578EE1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00757621F7BA7CCFAC4F9F7E /* libPods.a */; };
 		C00D4D9C1C7C92C70001413A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C00D4D9B1C7C92C70001413A /* UIView+Extension.m */; };
+		C01C539F1C85CC0D00AB4074 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C539D1C85CC0D00AB4074 /* RegistViewController.m */; };
+		C01C53A01C85CC0D00AB4074 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */; };
+		C01C53A31C85DEE900AB4074 /* HXAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C53A21C85DEE900AB4074 /* HXAlert.m */; };
 		C0F1C6D41C7715240002163D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C6D31C7715240002163D /* main.m */; };
 		C0F1C6D71C7715240002163D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C6D61C7715240002163D /* AppDelegate.m */; };
 		C0F1C6DA1C7715240002163D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1C6D91C7715240002163D /* ViewController.m */; };
@@ -66,6 +69,11 @@
 		9802916154954EEE761D5DAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C00D4D9A1C7C92C70001413A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C00D4D9B1C7C92C70001413A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		C01C539C1C85CC0D00AB4074 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		C01C539D1C85CC0D00AB4074 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
+		C01C53A11C85DEE900AB4074 /* HXAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAlert.h; sourceTree = "<group>"; };
+		C01C53A21C85DEE900AB4074 /* HXAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAlert.m; sourceTree = "<group>"; };
 		C0F1C6CF1C7715240002163D /* EaseTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F1C6D31C7715240002163D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0F1C6D51C7715240002163D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -182,6 +190,8 @@
 				C0F8DAB01C84140C00DDF040 /* CommonKeyAndAccount.m */,
 				C00D4D9A1C7C92C70001413A /* UIView+Extension.h */,
 				C00D4D9B1C7C92C70001413A /* UIView+Extension.m */,
+				C01C53A11C85DEE900AB4074 /* HXAlert.h */,
+				C01C53A21C85DEE900AB4074 /* HXAlert.m */,
 				C0F685DE1C7A96390028E204 /* images */,
 				C0F1C7051C7716300002163D /* Classes */,
 				C0F1C6DB1C7715240002163D /* Main.storyboard */,
@@ -235,6 +245,9 @@
 			children = (
 				C0F1C7071C7716300002163D /* EaseTalkViewController.h */,
 				C0F1C7081C7716300002163D /* EaseTalkViewController.m */,
+				C01C539C1C85CC0D00AB4074 /* RegistViewController.h */,
+				C01C539D1C85CC0D00AB4074 /* RegistViewController.m */,
+				C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */,
 			);
 			path = EaseTalk;
 			sourceTree = "<group>";
@@ -443,6 +456,7 @@
 				C0F1C6DD1C7715240002163D /* Main.storyboard in Resources */,
 				C0F687111C7A96390028E204 /* neighbour@3x.png in Resources */,
 				C0F6870D1C7A96390028E204 /* myfamily@3x.png in Resources */,
+				C01C53A01C85CC0D00AB4074 /* RegistViewController.xib in Resources */,
 				C0F687161C7A96390028E204 /* setting_highlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,11 +532,13 @@
 			files = (
 				C00D4D9C1C7C92C70001413A /* UIView+Extension.m in Sources */,
 				C0F1C71B1C77165A0002163D /* ETNavigationController.m in Sources */,
+				C01C539F1C85CC0D00AB4074 /* RegistViewController.m in Sources */,
 				C0F1C7121C7716300002163D /* EaseTalkViewController.m in Sources */,
 				C0F1C6DA1C7715240002163D /* ViewController.m in Sources */,
 				C0F1C6D71C7715240002163D /* AppDelegate.m in Sources */,
 				C0F1C7131C7716300002163D /* ETMapViewController.mm in Sources */,
 				C0F1C7151C7716300002163D /* ProfileViewController.m in Sources */,
+				C01C53A31C85DEE900AB4074 /* HXAlert.m in Sources */,
 				C0F8DAB11C84140C00DDF040 /* CommonKeyAndAccount.m in Sources */,
 				C0F1C7141C7716300002163D /* ETPayViewController.m in Sources */,
 				C0F1C71C1C77165A0002163D /* ETTabBarController.m in Sources */,
