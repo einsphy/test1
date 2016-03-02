@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		929C7D6D707CD2D882578EE1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00757621F7BA7CCFAC4F9F7E /* libPods.a */; };
+		C00355A01C8732320051F313 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C003559E1C8732320051F313 /* LoginViewController.m */; };
+		C00355A11C8732320051F313 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C003559F1C8732320051F313 /* LoginViewController.xib */; };
 		C00D4D9C1C7C92C70001413A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C00D4D9B1C7C92C70001413A /* UIView+Extension.m */; };
 		C01C539F1C85CC0D00AB4074 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C539D1C85CC0D00AB4074 /* RegistViewController.m */; };
 		C01C53A01C85CC0D00AB4074 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */; };
@@ -67,6 +69,9 @@
 /* Begin PBXFileReference section */
 		00757621F7BA7CCFAC4F9F7E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9802916154954EEE761D5DAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C003559D1C8732320051F313 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C003559E1C8732320051F313 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C003559F1C8732320051F313 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C00D4D9A1C7C92C70001413A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C00D4D9B1C7C92C70001413A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C01C539C1C85CC0D00AB4074 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
@@ -248,6 +253,9 @@
 				C01C539C1C85CC0D00AB4074 /* RegistViewController.h */,
 				C01C539D1C85CC0D00AB4074 /* RegistViewController.m */,
 				C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */,
+				C003559D1C8732320051F313 /* LoginViewController.h */,
+				C003559E1C8732320051F313 /* LoginViewController.m */,
+				C003559F1C8732320051F313 /* LoginViewController.xib */,
 			);
 			path = EaseTalk;
 			sourceTree = "<group>";
@@ -451,6 +459,7 @@
 				C0F687171C7A96390028E204 /* setting_highlight@3x.png in Resources */,
 				C0F687131C7A96390028E204 /* neighbour_highlight@3x.png in Resources */,
 				C0F6870B1C7A96390028E204 /* familybook_highlight@3x.png in Resources */,
+				C00355A11C8732320051F313 /* LoginViewController.xib in Resources */,
 				C0F687091C7A96390028E204 /* familybook@3x.png in Resources */,
 				C0F6870C1C7A96390028E204 /* myfamily@2x.png in Resources */,
 				C0F1C6DD1C7715240002163D /* Main.storyboard in Resources */,
@@ -534,6 +543,7 @@
 				C0F1C71B1C77165A0002163D /* ETNavigationController.m in Sources */,
 				C01C539F1C85CC0D00AB4074 /* RegistViewController.m in Sources */,
 				C0F1C7121C7716300002163D /* EaseTalkViewController.m in Sources */,
+				C00355A01C8732320051F313 /* LoginViewController.m in Sources */,
 				C0F1C6DA1C7715240002163D /* ViewController.m in Sources */,
 				C0F1C6D71C7715240002163D /* AppDelegate.m in Sources */,
 				C0F1C7131C7716300002163D /* ETMapViewController.mm in Sources */,

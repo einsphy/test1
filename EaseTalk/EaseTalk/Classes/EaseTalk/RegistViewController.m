@@ -10,11 +10,9 @@
 #import "EaseTalkViewController.h"
 @interface RegistViewController ()<UITextFieldDelegate,EMChatManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userName;
-@property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *passwordAgain;
-@property (weak, nonatomic) IBOutlet UITextField *phoneNum;
-@property (weak, nonatomic) IBOutlet UITextField *label;
+
 @property (weak, nonatomic) IBOutlet UIButton *registBtn;
 
 @end
@@ -25,18 +23,7 @@
     [super viewDidLoad];
     
     
-    /**
-     成为管理者，开始进行注册、登录等操作
-     
-     */
-    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-    
-    
-    
-    
-    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_userName.text password:_password.text];
-    _userName.delegate = self;
-    
+    [[EaseMob sharedInstance]registerSDKWithAppKey:huanxinIMKey apnsCertName:nil];
     
 }
 
@@ -57,12 +44,17 @@
     {
         
     
-        //EaseTalkViewController *easeTVC = [[EaseTalkViewController alloc]init];
-//        [HXAlert showAlertViewAtViewController:self withTitle:@"提示" message:@"恭喜您,注册成功" confirmMessage:@"确定" confirmStyle:(UIAlertActionStyleDefault) confirmHandler:^(UIPreviewAction *action, UIViewController *previewViewController) {
-//            [self popoverPresentationController];
-//        } cancelMessage:@"取消" cancelStyle:(UIAlertActionStyleCancel) cancleHandler:nil];
+        [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_userName.text password:_password.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
+            if (!error) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            } else {
+                [HXAlert showAlertViewAtViewController:self withTitle:@"提示" message: [NSString stringWithFormat:@"%@",error] confirmMessage:@"确定" confirmStyle:(UIAlertActionStyleDefault) confirmHandler:nil cancelMessage:@"取消" cancelStyle:(UIAlertActionStyleCancel) cancleHandler:nil];
+                HXLog(@"%@",error);
+                
+            }
+        } onQueue:nil];
         
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        
     
     }
 }
