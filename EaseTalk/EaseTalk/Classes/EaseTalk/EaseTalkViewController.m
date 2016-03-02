@@ -22,21 +22,42 @@
     [super viewDidLoad];
 
     
+    
+    
+    
+    [self subviews];
+
+}
+
+- (void)subviews
+{
     self.btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.btn.width = 40;
     self.btn.height = 40;
     [self.btn setTitle:@"设置" forState:(UIControlStateNormal)];
     [self.btn addTarget:self action:@selector(btnClick) forControlEvents:(UIControlEventTouchUpInside)];
-        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.btn];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.btn];
     self.navigationItem.leftBarButtonItem = leftItem;
-
+    
     self.settingTableView = [[UITableView alloc]initWithFrame:CGRectMake(- self.view.width / 2, 0, self.view.width / 2, self.view.height) style:(UITableViewStylePlain)];
     self.settingTableView.dataSource = self;
     self.settingTableView.delegate = self;
     
     [[UIApplication sharedApplication].windows.lastObject addSubview:self.settingTableView];
     
-   // [self.view addSubview:self.settingTableView];
+    [self.view addSubview:self.settingTableView];
+    
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:@"聊天" style:(UIBarButtonItemStylePlain) target:self action:@selector(rightClick)];
+    self.navigationItem.rightBarButtonItem = right;
+
+}
+
+- (void)rightClick
+{
+
+    
+
 
 }
 
