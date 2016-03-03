@@ -7,7 +7,7 @@
 //
 
 #import "ETTabBarController.h"
-#import "EaseTalkViewController.h"
+#import "FriendListViewController.h"
 #import "ETNavigationController.h"
 #import "ETMapViewController.h"
 #import "ETPayViewController.h"
@@ -22,8 +22,8 @@
     [super viewDidLoad];
 
     //环信
-    EaseTalkViewController *easeVC = [[EaseTalkViewController alloc]init];
-    [self addChildViewController:easeVC withTitle:@"环信" image:@"familybook@2x" selectedImage:@"familybook_highlight@2x"];
+    FriendListViewController *easeVC = [[FriendListViewController alloc]init];
+    [self addChildViewController:easeVC withTitle:@"好友" image:@"familybook@2x" selectedImage:@"familybook_highlight@2x"];
     easeVC.view.backgroundColor = [UIColor redColor];
     
     

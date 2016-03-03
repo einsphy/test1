@@ -7,7 +7,7 @@
 //
 
 #import "RegistViewController.h"
-#import "EaseTalkViewController.h"
+#import "FriendListViewController.h"
 @interface RegistViewController ()<UITextFieldDelegate,EMChatManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;

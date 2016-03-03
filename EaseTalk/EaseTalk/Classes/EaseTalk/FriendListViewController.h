@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EaseTalkViewController : UIViewController
-
+@interface FriendListViewController : UIViewController
+@property (nonatomic,strong)UIButton *btn;
 @end

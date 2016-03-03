@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegistViewController.h"
+#import "FriendListViewController.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *pasword;
@@ -29,6 +30,7 @@
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_username.text password:_pasword.text completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error) {
             [self.navigationController popToRootViewControllerAnimated:YES];
+            FriendListViewController *easeVC = [[FriendListViewController alloc]init];
         } else {
             [HXAlert showAlertViewAtViewController:self withTitle:@"提示" message:@"用户名或密码不正确,请重新输入!" confirmMessage:@"确定" confirmStyle:(UIAlertActionStyleDefault) confirmHandler:nil cancelMessage:@"" cancelStyle:(UIAlertActionStyleCancel) cancleHandler:nil];
         }
