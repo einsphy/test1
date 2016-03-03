@@ -140,26 +140,26 @@
                     <exclude reference="2uy-u2-nKt"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Fse-dw-ELJ"/>
-                    <exclude reference="rDB-e6-udi"/>
                     <exclude reference="Cjl-ya-Oir"/>
                     <exclude reference="Ud2-Vs-8dL"/>
                     <exclude reference="f4I-y7-BWd"/>
-                    <exclude reference="Hdu-Zo-aSD"/>
-                    <exclude reference="and-o2-NDV"/>
-                    <exclude reference="ecr-tG-ZFQ"/>
-                    <exclude reference="xGb-VD-RvT"/>
                     <exclude reference="5Hl-7y-QBe"/>
                     <exclude reference="9o8-ww-W45"/>
                     <exclude reference="dtx-2W-daZ"/>
                     <exclude reference="nPa-IS-2kK"/>
-                    <exclude reference="AJr-Jc-UWR"/>
-                    <exclude reference="Wh1-vE-qSz"/>
-                    <exclude reference="wfZ-MH-5jL"/>
                     <exclude reference="2R3-8K-Jp1"/>
                     <exclude reference="QfZ-qf-TDh"/>
                     <exclude reference="qaX-kf-R2x"/>
                     <exclude reference="yPN-yu-zfI"/>
+                    <exclude reference="AJr-Jc-UWR"/>
+                    <exclude reference="Wh1-vE-qSz"/>
+                    <exclude reference="wfZ-MH-5jL"/>
+                    <exclude reference="Hdu-Zo-aSD"/>
+                    <exclude reference="and-o2-NDV"/>
+                    <exclude reference="ecr-tG-ZFQ"/>
+                    <exclude reference="xGb-VD-RvT"/>
+                    <exclude reference="Fse-dw-ELJ"/>
+                    <exclude reference="rDB-e6-udi"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -172,26 +172,26 @@
                     <include reference="2uy-u2-nKt"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Fse-dw-ELJ"/>
-                    <include reference="rDB-e6-udi"/>
                     <include reference="Cjl-ya-Oir"/>
                     <include reference="Ud2-Vs-8dL"/>
                     <include reference="f4I-y7-BWd"/>
-                    <include reference="Hdu-Zo-aSD"/>
-                    <include reference="and-o2-NDV"/>
-                    <include reference="ecr-tG-ZFQ"/>
-                    <include reference="xGb-VD-RvT"/>
                     <include reference="5Hl-7y-QBe"/>
                     <include reference="9o8-ww-W45"/>
                     <include reference="dtx-2W-daZ"/>
                     <include reference="nPa-IS-2kK"/>
-                    <include reference="AJr-Jc-UWR"/>
-                    <include reference="Wh1-vE-qSz"/>
-                    <include reference="wfZ-MH-5jL"/>
                     <include reference="2R3-8K-Jp1"/>
                     <include reference="QfZ-qf-TDh"/>
                     <include reference="qaX-kf-R2x"/>
                     <include reference="yPN-yu-zfI"/>
+                    <include reference="AJr-Jc-UWR"/>
+                    <include reference="Wh1-vE-qSz"/>
+                    <include reference="wfZ-MH-5jL"/>
+                    <include reference="Hdu-Zo-aSD"/>
+                    <include reference="and-o2-NDV"/>
+                    <include reference="ecr-tG-ZFQ"/>
+                    <include reference="xGb-VD-RvT"/>
+                    <include reference="Fse-dw-ELJ"/>
+                    <include reference="rDB-e6-udi"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="492" y="346"/>

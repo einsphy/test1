@@ -25,7 +25,7 @@
     [self.window makeKeyAndVisible];
     //[MBProgressHUD showHUDAddedTo:self.window animated:YES];
     
-    
+    [[EaseMob sharedInstance]registerSDKWithAppKey:huanxinIMKey apnsCertName:nil];
     
     
     return YES;

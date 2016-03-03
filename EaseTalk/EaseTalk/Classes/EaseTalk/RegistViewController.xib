@@ -125,16 +125,28 @@
                         <action selector="registBtnClick:" destination="-1" eventType="touchUpInside" id="H1v-fh-Un6"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAQ-s0-4aP">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.50587930449999996" blue="0.19999776929999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="3Bf-BV-cZu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.71480774775897582" green="1" blue="0.90349470896550277" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="YVp-5p-gus" firstAttribute="centerX" secondItem="JWK-dV-nE6" secondAttribute="centerX" id="0mE-LV-c7E"/>
+                <constraint firstItem="nAQ-s0-4aP" firstAttribute="height" secondItem="ini-1z-y7X" secondAttribute="height" id="3JP-yN-ZyC"/>
                 <constraint firstItem="Ik1-E3-cp8" firstAttribute="width" secondItem="8qE-W7-v56" secondAttribute="width" id="4m6-pF-qzD"/>
                 <constraint firstItem="Uqz-Z3-5Od" firstAttribute="width" secondItem="YVp-5p-gus" secondAttribute="width" id="59x-sO-1UV"/>
                 <constraint firstItem="JWK-dV-nE6" firstAttribute="centerY" secondItem="8qE-W7-v56" secondAttribute="centerY" id="5R1-Xy-5b4"/>
                 <constraint firstItem="Uqz-Z3-5Od" firstAttribute="height" secondItem="YVp-5p-gus" secondAttribute="height" id="7W9-uE-ZaN"/>
                 <constraint firstItem="YVp-5p-gus" firstAttribute="height" secondItem="JWK-dV-nE6" secondAttribute="height" id="9UK-cE-Kse"/>
+                <constraint firstItem="nAQ-s0-4aP" firstAttribute="width" secondItem="ini-1z-y7X" secondAttribute="width" id="AS8-EB-l2p"/>
                 <constraint firstItem="8qE-W7-v56" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="DYn-Zp-3iJ"/>
+                <constraint firstItem="nAQ-s0-4aP" firstAttribute="top" secondItem="ini-1z-y7X" secondAttribute="bottom" constant="40" id="Fz2-9p-2EW"/>
                 <constraint firstItem="Uqz-Z3-5Od" firstAttribute="centerX" secondItem="YVp-5p-gus" secondAttribute="centerX" id="RON-Ox-6Ek"/>
                 <constraint firstItem="Emf-iH-tYg" firstAttribute="top" secondItem="Ik1-E3-cp8" secondAttribute="bottom" constant="40" id="RWd-0d-YgM"/>
                 <constraint firstItem="Ik1-E3-cp8" firstAttribute="centerX" secondItem="8qE-W7-v56" secondAttribute="centerX" id="WbU-3t-ZmS"/>
@@ -148,6 +160,7 @@
                 <constraint firstItem="YVp-5p-gus" firstAttribute="width" secondItem="JWK-dV-nE6" secondAttribute="width" id="pA3-rs-bzt"/>
                 <constraint firstItem="ini-1z-y7X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ptV-2M-Dv7"/>
                 <constraint firstItem="Ik1-E3-cp8" firstAttribute="height" secondItem="8qE-W7-v56" secondAttribute="height" id="qVV-o6-ZD6"/>
+                <constraint firstItem="nAQ-s0-4aP" firstAttribute="centerX" secondItem="ini-1z-y7X" secondAttribute="centerX" id="s9L-5P-rGV"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -158,6 +171,7 @@
                     <exclude reference="YVp-5p-gus"/>
                     <exclude reference="Uqz-Z3-5Od"/>
                     <exclude reference="ini-1z-y7X"/>
+                    <exclude reference="nAQ-s0-4aP"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="DYn-Zp-3iJ"/>
@@ -180,6 +194,10 @@
                     <exclude reference="cHL-hL-5Hp"/>
                     <exclude reference="kuG-fb-tTx"/>
                     <exclude reference="ptV-2M-Dv7"/>
+                    <exclude reference="3JP-yN-ZyC"/>
+                    <exclude reference="AS8-EB-l2p"/>
+                    <exclude reference="Fz2-9p-2EW"/>
+                    <exclude reference="s9L-5P-rGV"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -191,6 +209,7 @@
                     <include reference="YVp-5p-gus"/>
                     <include reference="Uqz-Z3-5Od"/>
                     <include reference="ini-1z-y7X"/>
+                    <include reference="nAQ-s0-4aP"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="DYn-Zp-3iJ"/>
@@ -213,6 +232,10 @@
                     <include reference="cHL-hL-5Hp"/>
                     <include reference="kuG-fb-tTx"/>
                     <include reference="ptV-2M-Dv7"/>
+                    <include reference="3JP-yN-ZyC"/>
+                    <include reference="AS8-EB-l2p"/>
+                    <include reference="Fz2-9p-2EW"/>
+                    <include reference="s9L-5P-rGV"/>
                 </mask>
             </variation>
         </view>

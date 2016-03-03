@@ -23,7 +23,9 @@
     [super viewDidLoad];
     
     
-    [[EaseMob sharedInstance]registerSDKWithAppKey:huanxinIMKey apnsCertName:nil];
+    _userName.delegate = self;
+    _password.delegate = self;
+    _passwordAgain.delegate = self;
     
 }
 
@@ -46,7 +48,7 @@
     
         [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_userName.text password:_password.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
             if (!error) {
-                [self.navigationController popToRootViewControllerAnimated:YES];
+                [self dismissViewControllerAnimated:YES completion:nil];
             } else {
                 [HXAlert showAlertViewAtViewController:self withTitle:@"提示" message: [NSString stringWithFormat:@"%@",error] confirmMessage:@"确定" confirmStyle:(UIAlertActionStyleDefault) confirmHandler:nil cancelMessage:@"取消" cancelStyle:(UIAlertActionStyleCancel) cancleHandler:nil];
                 HXLog(@"%@",error);
@@ -59,13 +61,22 @@
     }
 }
 
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
+- (IBAction)backBtn:(UIButton *)sender {
     
-    [self.view resignFirstResponder];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
-    return YES;
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+
+    [_userName resignFirstResponder];
+    
+    
+    [_password resignFirstResponder];
+    
+    
+    [_passwordAgain resignFirstResponder];
+    
 
 }
 

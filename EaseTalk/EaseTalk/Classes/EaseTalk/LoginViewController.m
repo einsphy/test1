@@ -38,7 +38,7 @@
 
 - (IBAction)registBtnClick:(UIButton *)sender {
     RegistViewController *registVC = [[RegistViewController alloc]init];
-    [self.navigationController pushViewController:registVC animated:YES];
+    [self presentViewController:registVC animated:YES completion:nil];
     
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "EaseTalkViewController.h"
-#import "RegistViewController.h"
+#import "LoginViewController.h"
 @interface EaseTalkViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)UITableView *settingTableView;
@@ -93,9 +93,9 @@
 {
     
     
-    RegistViewController *registVC = [[RegistViewController alloc]init];
+    LoginViewController *loginVC = [[LoginViewController alloc]init];
     
-    [self.navigationController pushViewController:registVC animated:YES];
+    [self.navigationController pushViewController:loginVC animated:YES];
     
 //    self.btn.enabled = NO;
 //    
