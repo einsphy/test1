@@ -29,12 +29,12 @@
 - (IBAction)loginBtnClick:(UIButton *)sender {
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_username.text password:_pasword.text completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error) {
-            [self.navigationController popToRootViewControllerAnimated:YES];
-            FriendListViewController *easeVC = [[FriendListViewController alloc]init];
+            //FriendListViewController *easeVC = [[FriendListViewController alloc]init];
+            [self dismissViewControllerAnimated:YES completion:nil];
         } else {
             [HXAlert showAlertViewAtViewController:self withTitle:@"提示" message:@"用户名或密码不正确,请重新输入!" confirmMessage:@"确定" confirmStyle:(UIAlertActionStyleDefault) confirmHandler:nil cancelMessage:@"" cancelStyle:(UIAlertActionStyleCancel) cancleHandler:nil];
         }
-    } onQueue:nil];
+    } onQueue:dispatch_get_main_queue()];
     
 }
 

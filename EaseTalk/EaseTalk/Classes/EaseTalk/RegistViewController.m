@@ -54,7 +54,7 @@
                 HXLog(@"%@",error);
                 
             }
-        } onQueue:nil];
+        } onQueue:dispatch_get_main_queue()];
         
         
     
@@ -80,10 +80,6 @@
 
 }
 
-//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//[self.view resignFirstResponder];
-//
-//}
+
 
 @end

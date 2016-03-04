@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ChatViewViewController : UIViewController
-{
-
-    NSString *_name;
-}
+@property (nonatomic, strong)NSString *name;
 @end

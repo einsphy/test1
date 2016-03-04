@@ -9,6 +9,7 @@
 #import "FriendListViewController.h"
 #import "LoginViewController.h"
 #import "ChatViewViewController.h"
+#import "AddFriendViewController.h"
 @interface FriendListViewController ()<UITableViewDataSource,UITableViewDelegate,EMChatManagerDelegate>
 
 @property (nonatomic, strong)UITableView *friendsTableView;
@@ -21,7 +22,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 
-    [super viewWillAppear:YES];
+    [super viewWillAppear:animated];
 
 }
 
@@ -30,7 +31,7 @@
     [super loadView];
     
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"注销" style:(UIBarButtonItemStylePlain) target:self action:@selector(leftBarButtonClick)];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"注销" style:(UIBarButtonItemStylePlain) target:self action:@selector(didClickedCancelButton)];
     
     //注销
     
@@ -42,20 +43,16 @@
         } else {
             HXLog(@"错误信息%@",error);
         }
-    } onQueue:nil];
+    } onQueue:dispatch_get_main_queue()];
 
 }
 
-- (void)leftBarButtonClick
-{
 
-
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     _listArray  = [NSMutableArray array];
-    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"注销" style:(UIBarButtonItemStylePlain) target:self action:@selector(didClickedCancelButton)];
+    
     
     
     
@@ -65,22 +62,15 @@
 
 - (void)subviews
 {
-//    self.btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//    self.btn.width = 40;
-//    self.btn.height = 40;
-//    [self.btn setTitle:@"设置" forState:(UIControlStateNormal)];
-//    
-//    [self.btn addTarget:self action:@selector(btnClick) forControlEvents:(UIControlEventTouchUpInside)];
-//    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.btn];
-//    self.navigationItem.leftBarButtonItem = leftItem;
+
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(addFriendClick)];
     self.navigationItem.rightBarButtonItem = right;
 
     self.friendsTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.friendsTableView.dataSource = self;
     self.friendsTableView.delegate = self;
-    
-    
+    self.friendsTableView.backgroundColor = [UIColor lightGrayColor];
+    self.friendsTableView.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:self.friendsTableView];
     
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:dispatch_get_main_queue()];
@@ -96,6 +86,8 @@
     
 
     [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES];
+    LoginViewController *loginVC =[[LoginViewController alloc]init];
+    [self.navigationController presentViewController:loginVC animated:YES completion:nil];
     
 
 
@@ -105,29 +97,11 @@
 {
 
     //跳转到添加好友页面
-   // [self.navigationController pushViewController:[] animated:<#(BOOL)#>]
+    AddFriendViewController *addFriendVC = [[AddFriendViewController alloc]init];
+    [self.navigationController pushViewController:addFriendVC animated:YES];
 
 
 }
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    static NSString *ID = @"cell";
-
-    UITableViewCell *cell = [self.friendsTableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:ID];
-    }
-    
-    EMBuddy *bubby = _listArray[indexPath.row];
-    cell.textLabel.text = bubby.username;
-    
-    return cell;
-    
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
@@ -142,6 +116,25 @@
     return 50;
     
 }
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    static NSString *ID = @"cell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:ID];
+    }
+    
+    EMBuddy *bubby = _listArray[indexPath.row];
+    cell.textLabel.text = bubby.username;
+    
+    return cell;
+    
+}
+
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -150,12 +143,11 @@
     
     EMBuddy *bubby = _listArray[indexPath.row];
     
-#warning title要改回name及在聊天时的用户名
     
-    chatVC.title = bubby.username;
+    chatVC.name = bubby.username;
     
     
-    [self.navigationController pushViewController:chatVC animated:YES];
+    [self presentViewController:chatVC animated:YES completion:nil];
     
 
 }
@@ -165,18 +157,18 @@
     
     
 
-    UIAlertController *alertVC = [[UIAlertController alloc]init];
-    UIAlertAction *acceptAction = [UIAlertAction actionWithTitle:@"好" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"来自%@",username] message:message preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *acceptAction = [UIAlertAction actionWithTitle:@"好" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * action) {
         
         EMError *error;
         
-        if ([[EaseMob sharedInstance].chatManager acceptBuddyRequest:@"好" error:&error] && !error) {
+        if ([[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:&error] && !error) {
             
             //发送同意成功
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                [ [EaseMob sharedInstance].chatManager asyncFetchBuddyListWithCompletion:^(NSArray *buddyList, EMError *error) {
-                    if (!error) {
+                    if (!error)
+                    {
                         HXLog(@"获取成功");
                         [_listArray removeAllObjects];
                         [_listArray addObjectsFromArray:buddyList];
@@ -188,9 +180,8 @@
                     
                     */
                } onQueue:dispatch_get_main_queue()];
-            });
-            
-        }
+            }
+        
         
         
     }];
@@ -221,25 +212,7 @@
 
 }
 
-- (void)btnClick
-{
-    
-    
-    LoginViewController *loginVC = [[LoginViewController alloc]init];
-    
-    [self.navigationController pushViewController:loginVC animated:YES];
-    
-//    self.btn.enabled = NO;
-//    
-//    [UIView animateWithDuration:2.0 animations:^{
-//        self.settingTableView.x += self.view.width / 2;
-//        HXLog(@"-------");
-//    }];
 
-    
-
-
-}
 
 
 

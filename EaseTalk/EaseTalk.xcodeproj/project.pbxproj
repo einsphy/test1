@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		929C7D6D707CD2D882578EE1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00757621F7BA7CCFAC4F9F7E /* libPods.a */; };
+		C001CD441C887B6600B40498 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C001CD431C887B6600B40498 /* AddFriendViewController.m */; };
 		C00355A01C8732320051F313 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C003559E1C8732320051F313 /* LoginViewController.m */; };
 		C00355A11C8732320051F313 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C003559F1C8732320051F313 /* LoginViewController.xib */; };
 		C00D4D9C1C7C92C70001413A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C00D4D9B1C7C92C70001413A /* UIView+Extension.m */; };
@@ -71,6 +72,8 @@
 /* Begin PBXFileReference section */
 		00757621F7BA7CCFAC4F9F7E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9802916154954EEE761D5DAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C001CD421C887B6600B40498 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		C001CD431C887B6600B40498 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		C003559D1C8732320051F313 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C003559E1C8732320051F313 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C003559F1C8732320051F313 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				C0F32DF71C8840E200D6E15A /* DialogBoxView.m */,
 				C0F32DF01C8813E700D6E15A /* ChatViewViewController.h */,
 				C0F32DF11C8813E700D6E15A /* ChatViewViewController.m */,
+				C001CD421C887B6600B40498 /* AddFriendViewController.h */,
+				C001CD431C887B6600B40498 /* AddFriendViewController.m */,
 				C01C539C1C85CC0D00AB4074 /* RegistViewController.h */,
 				C01C539D1C85CC0D00AB4074 /* RegistViewController.m */,
 				C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */,
@@ -556,6 +561,7 @@
 				C0F32DF21C8813E700D6E15A /* ChatViewViewController.m in Sources */,
 				C00355A01C8732320051F313 /* LoginViewController.m in Sources */,
 				C0F1C6DA1C7715240002163D /* ViewController.m in Sources */,
+				C001CD441C887B6600B40498 /* AddFriendViewController.m in Sources */,
 				C0F1C6D71C7715240002163D /* AppDelegate.m in Sources */,
 				C0F1C7131C7716300002163D /* ETMapViewController.mm in Sources */,
 				C0F1C7151C7716300002163D /* ProfileViewController.m in Sources */,

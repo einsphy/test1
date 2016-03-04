@@ -28,6 +28,7 @@
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - 50)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:_tableView];
 
 
@@ -67,6 +68,8 @@
     [super viewWillDisappear:animated];
     
     [self removeForKeyboardNotifications];
+    
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
 
 }
 
@@ -149,13 +152,111 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     
     
+    /**
+     使用通知注册观察键盘要消失时
+     
+     */
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    
 
 }
 
+#pragma mark --移除观察者
 
 - (void)removeForKeyboardNotifications
 {
 
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 
 }
+
+- (void)didKeyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *info = [notification userInfo];
+    
+    CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    HXLog(@"%f",keyboardSize.height);
+    
+    //输入框位置动画加载
+    [self beginMoveUpAnimation:keyboardSize.height];
+    
+
+
+}
+
+- (void)didKeyboardWillHide:(NSNotification *)notification
+{
+    [self beginMoveUpAnimation:0];
+    
+}
+
+/**
+ 开始执行键盘改变后的对应的视图变化
+ 
+ */
+
+#pragma mark --beginMoveUpAnimation
+- (void)beginMoveUpAnimation:(CGFloat)height
+{
+[UIView animateWithDuration:0.3 animations:^{
+    [_dialogBoxView setFrame:CGRectMake(0, self.view.height - (height +40), _dialogBoxView.width, _dialogBoxView.height)];
+}];
+    
+    [_tableView layoutIfNeeded];
+    
+    if ([_conversation loadAllMessages].count > 1) {
+        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_conversation.loadAllMessages.count - 1 inSection:0] atScrollPosition:(UITableViewScrollPositionMiddle) animated:YES];
+    }
+
+}
+
+#pragma mark --tableview  datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+
+    return _conversation.loadAllMessages.count;
+
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"cell";
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:ID];
+    }
+    
+    EMMessage *message = _conversation.loadAllMessages[indexPath.row];
+    EMTextMessageBody *body = [message.messageBodies lastObject];
+    
+    
+    /**
+     判断发消息的人是否是当前聊天的人,左边的是对面发送来的,右边是自己发的
+     
+     */
+    
+    if ([message.to isEqualToString:_name]) {
+        cell.detailTextLabel.text = body.text;
+        cell.detailTextLabel.textColor = [UIColor redColor];
+        cell.textLabel.text = @"";
+        cell.textLabel.textColor = [UIColor blueColor];
+    } else {
+        cell.detailTextLabel.text = @"";
+        cell.textLabel.text = body.text;
+        cell.detailTextLabel.textColor = [UIColor redColor];
+        cell.textLabel.textColor = [UIColor blueColor];
+    }
+    
+    return cell;
+    
+}
+
+
 @end
