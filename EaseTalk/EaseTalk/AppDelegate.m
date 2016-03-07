@@ -26,10 +26,24 @@
     //[MBProgressHUD showHUDAddedTo:self.window animated:YES];
     
     [[EaseMob sharedInstance]registerSDKWithAppKey:huanxinIMKey apnsCertName:@""];
-    
-    
+    [OpenShare connectAlipay];
+    [OpenShare connectQQWithAppId:@"1103194207"];
+    [OpenShare connectWeiboWithAppKey:@"402180334"];
+    [OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
+    [OpenShare connectRenrenWithAppId:@"228525" AndAppKey:@"1dd8cba4215d4d4ab96a49d3058c1d7f"];
     return YES;
 }
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+    if ([OpenShare handleOpenURL:url]) {
+        return YES;
+    }
+    
+    return YES;
+
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

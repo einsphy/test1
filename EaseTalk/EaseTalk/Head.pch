@@ -20,6 +20,10 @@
 #import "EMMessage.h"
 #import "EaseMob.h"
 #import "HXAlert.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+//#import "OpenShare.h"
+#import "OpenShareHeader.h"
 //调试阶段会打印，发布阶段不会
 #ifdef DEBUG
 

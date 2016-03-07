@@ -13,6 +13,7 @@
 #import "ETPayViewController.h"
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
+#import "MJExtension.h"
 @interface ETTabBarController ()
 
 @end

@@ -11,6 +11,9 @@
 		C001CD441C887B6600B40498 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C001CD431C887B6600B40498 /* AddFriendViewController.m */; };
 		C00355A01C8732320051F313 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C003559E1C8732320051F313 /* LoginViewController.m */; };
 		C00355A11C8732320051F313 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C003559F1C8732320051F313 /* LoginViewController.xib */; };
+		C00C7F3A1C8DD907001F5D6E /* ProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C7F391C8DD907001F5D6E /* ProfileItem.m */; };
+		C00C7F3E1C8DDD6B001F5D6E /* Profile1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00C7F3C1C8DDD6B001F5D6E /* Profile1TableViewCell.m */; };
+		C00C7F3F1C8DDD6B001F5D6E /* Profile1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00C7F3D1C8DDD6B001F5D6E /* Profile1TableViewCell.xib */; };
 		C00D4D9C1C7C92C70001413A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C00D4D9B1C7C92C70001413A /* UIView+Extension.m */; };
 		C01C539F1C85CC0D00AB4074 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C539D1C85CC0D00AB4074 /* RegistViewController.m */; };
 		C01C53A01C85CC0D00AB4074 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C539E1C85CC0D00AB4074 /* RegistViewController.xib */; };
@@ -77,6 +80,11 @@
 		C003559D1C8732320051F313 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C003559E1C8732320051F313 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C003559F1C8732320051F313 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C00C7F381C8DD907001F5D6E /* ProfileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileItem.h; sourceTree = "<group>"; };
+		C00C7F391C8DD907001F5D6E /* ProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileItem.m; sourceTree = "<group>"; };
+		C00C7F3B1C8DDD6B001F5D6E /* Profile1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile1TableViewCell.h; sourceTree = "<group>"; };
+		C00C7F3C1C8DDD6B001F5D6E /* Profile1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile1TableViewCell.m; sourceTree = "<group>"; };
+		C00C7F3D1C8DDD6B001F5D6E /* Profile1TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Profile1TableViewCell.xib; sourceTree = "<group>"; };
 		C00D4D9A1C7C92C70001413A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C00D4D9B1C7C92C70001413A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C01C539C1C85CC0D00AB4074 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
@@ -298,6 +306,11 @@
 			children = (
 				C0F1C7101C7716300002163D /* ProfileViewController.h */,
 				C0F1C7111C7716300002163D /* ProfileViewController.m */,
+				C00C7F381C8DD907001F5D6E /* ProfileItem.h */,
+				C00C7F391C8DD907001F5D6E /* ProfileItem.m */,
+				C00C7F3B1C8DDD6B001F5D6E /* Profile1TableViewCell.h */,
+				C00C7F3C1C8DDD6B001F5D6E /* Profile1TableViewCell.m */,
+				C00C7F3D1C8DDD6B001F5D6E /* Profile1TableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -482,6 +495,7 @@
 				C0F6870D1C7A96390028E204 /* myfamily@3x.png in Resources */,
 				C01C53A01C85CC0D00AB4074 /* RegistViewController.xib in Resources */,
 				C0F687161C7A96390028E204 /* setting_highlight@2x.png in Resources */,
+				C00C7F3F1C8DDD6B001F5D6E /* Profile1TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +577,7 @@
 				C0F1C6DA1C7715240002163D /* ViewController.m in Sources */,
 				C001CD441C887B6600B40498 /* AddFriendViewController.m in Sources */,
 				C0F1C6D71C7715240002163D /* AppDelegate.m in Sources */,
+				C00C7F3E1C8DDD6B001F5D6E /* Profile1TableViewCell.m in Sources */,
 				C0F1C7131C7716300002163D /* ETMapViewController.mm in Sources */,
 				C0F1C7151C7716300002163D /* ProfileViewController.m in Sources */,
 				C01C53A31C85DEE900AB4074 /* HXAlert.m in Sources */,
@@ -570,6 +585,7 @@
 				C0F1C7141C7716300002163D /* ETPayViewController.m in Sources */,
 				C0F1C71C1C77165A0002163D /* ETTabBarController.m in Sources */,
 				C0F32DF81C8840E200D6E15A /* DialogBoxView.m in Sources */,
+				C00C7F3A1C8DD907001F5D6E /* ProfileItem.m in Sources */,
 				C0F1C6D41C7715240002163D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
